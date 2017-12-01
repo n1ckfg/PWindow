@@ -1,4 +1,6 @@
 class PWindow extends PApplet {
+
+  color bgColor = color(255,0,0);
   
   PWindow() {
     super();
@@ -11,11 +13,12 @@ class PWindow extends PApplet {
   }
 
   void setup() {
-    background(150);
+    background(bgColor);
   }
 
   void draw() {
     ellipse(random(width), random(height), random(50), random(50));
+    ellipse(mouseX, mouseY, 10, 10);
   }
 
   void mousePressed() {
